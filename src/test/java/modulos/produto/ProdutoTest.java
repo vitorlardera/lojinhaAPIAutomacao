@@ -1,7 +1,6 @@
 package modulos.produto;
 
 import io.restassured.http.ContentType;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -13,7 +12,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static io.restassured.RestAssured.*;
-import static io.restassured.matcher.RestAssuredMatchers.*;
 import static org.hamcrest.Matchers.*;
 
 @DisplayName("Testes API Rest do modulo de Produto")
@@ -24,7 +22,7 @@ public class ProdutoTest {
     public void beforeEach() {
         // configurando os dados da api rest da lojinha
         baseURI = "http://165.227.93.41";
-        // port = 8080;
+
         basePath = "/lojinha";
 
         UsuarioPojo usuario = new UsuarioPojo();
